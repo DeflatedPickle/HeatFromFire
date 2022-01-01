@@ -21,6 +21,12 @@
         "adapter": "kotlin",
         "value": "${group}.${id}.${name}"
       }
+    ],
+    "client" : [
+      {
+        "adapter": "kotlin",
+        "value": "${group}.${id}.${name}Client"
+      }
     ]
   },
   "mixins": [
