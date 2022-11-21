@@ -1,14 +1,14 @@
-/* Copyright (c) 2021 DeflatedPickle under the MIT license */
+/* Copyright (c) 2021-2022 DeflatedPickle under the MIT license */
 
 package com.deflatedpickle.heatfromfire
 
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.damage.DamageSource
 import net.minecraft.entity.effect.StatusEffect
-import net.minecraft.entity.effect.StatusEffectCategory
+import net.minecraft.entity.effect.StatusEffectType.HARMFUL
 
 object HeatStatusEffect : StatusEffect(
-    StatusEffectCategory.HARMFUL,
+    HARMFUL,
     0,
 ) {
     override fun isInstant() = true

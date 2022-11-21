@@ -1,8 +1,7 @@
-/* Copyright (c) 2021 DeflatedPickle under the MIT license */
+/* Copyright (c) 2021-2022 DeflatedPickle under the MIT license */
 
 package com.deflatedpickle.heatfromfire
 
-import net.fabricmc.api.ModInitializer
 import net.minecraft.block.AbstractFireBlock
 import net.minecraft.block.Block
 import net.minecraft.entity.EntityType
@@ -13,6 +12,8 @@ import net.minecraft.util.Identifier
 import net.minecraft.util.math.BlockPos
 import net.minecraft.util.registry.Registry
 import net.minecraft.world.World
+import org.quiltmc.loader.api.ModContainer
+import org.quiltmc.qsl.base.api.entrypoint.ModInitializer
 
 @Suppress("UNUSED")
 object HeatFromFire : ModInitializer {
@@ -32,7 +33,7 @@ object HeatFromFire : ModInitializer {
         ).build("heat_area_effect")
     )
 
-    override fun onInitialize() {
+    override fun onInitialize(mod: ModContainer) {
         println(listOf(MOD_ID, NAME, GROUP, AUTHOR, VERSION))
 
         Registry.register(Registry.STATUS_EFFECT, Identifier(MOD_ID, "heat"), HeatStatusEffect)

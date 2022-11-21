@@ -1,4 +1,4 @@
-/* Copyright (c) 2021 DeflatedPickle under the MIT license */
+/* Copyright (c) 2021-2022 DeflatedPickle under the MIT license */
 
 package com.deflatedpickle.heatfromfire
 
@@ -32,7 +32,7 @@ class HeatAreaAffectEntity(
             return
         }
 
-        affectedEntities.entries.removeIf { (_, value): Map.Entry<Entity?, Int> -> age >= value as Int }
+        affectedEntities.entries.removeIf { (_, value): Map.Entry<Entity?, Int> -> age >= value }
         val i = Lists.newArrayList<StatusEffectInstance>()
         for (j in potion.effects) {
             i.add(StatusEffectInstance(j.effectType, j.duration / 4, j.amplifier, j.isAmbient, j.shouldShowParticles()))
