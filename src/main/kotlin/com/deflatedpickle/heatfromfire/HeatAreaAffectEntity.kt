@@ -75,9 +75,9 @@ class HeatAreaAffectEntity(
         }
 
         if (random.nextInt(4) == 0) {
-            val d = pos.getX() + random.nextDouble(0.0, 1.0)
+            val d = pos.getX() + random.nextDouble()
             val e = pos.getY() - 1.0
-            val f = pos.getZ() + random.nextDouble(0.0, 1.0)
+            val f = pos.getZ() + random.nextDouble()
             world.addImportantParticle(ParticleTypes.SMOKE, d, e, f, 0.0, 0.0, 0.0)
             world.playSound(
                 d,
